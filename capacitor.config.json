@@ -1,0 +1,7 @@
+{
+  "appId": "com.launchApp.app",
+  "appName": "launchApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
