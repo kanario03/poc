@@ -10,8 +10,16 @@
 </ion-header>
 
 <ion-content>
-  <ion-button (click)="launchExternalApp()">
-    FaceBook
-  </ion-button>
+  <ion-row style="padding: 5px">
+    <ion-button (click)="launchExternalApp()">
+      FaceBook
+    </ion-button>
+  </ion-row>
+
+  <ion-row style="padding: 5px">
+    <ion-button (click)="openCamera()">
+      Camera
+    </ion-button>
+  </ion-row>
   <div> {{ display }} </div>
 </ion-content>

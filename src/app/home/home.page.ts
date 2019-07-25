@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { AppLauncher, AppLauncherOptions } from '@ionic-native/app-launcher/ngx';
 
+
 import { Plugins } from '@capacitor/core';
+import { Router } from '@angular/router';
 
 const { Device, App } = Plugins;
 const options: AppLauncherOptions = {
@@ -18,7 +20,8 @@ export class HomePage {
   display: any;
 
   constructor(
-    private appLauncher: AppLauncher
+    private appLauncher: AppLauncher,
+    private router: Router
   ) {
     this.information();
   }
@@ -30,8 +33,12 @@ export class HomePage {
 
 
   async launchExternalApp() {
-    const ret = await App.openUrl({ url: `co.rabbot.android://tst` });
+    const ret = await App.canOpenUrl({ url: `com.getcapacitor.myapp` });
     console.log('Open url response: ', ret);
+  }
+
+  openCamera() {
+    this.router.navigate(['camera']);
   }
 
 
