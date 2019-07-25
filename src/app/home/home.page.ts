@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AppLauncher, AppLauncherOptions } from '@ionic-native/app-launcher/ngx';
-import { AlertController } from '@ionic/angular';
 
 import { Plugins } from '@capacitor/core';
 
@@ -19,8 +18,7 @@ export class HomePage {
   display: any;
 
   constructor(
-    private appLauncher: AppLauncher,
-    public alertController: AlertController
+    private appLauncher: AppLauncher
   ) {
     this.information();
   }
@@ -36,28 +34,6 @@ export class HomePage {
     console.log('Open url response: ', ret);
   }
 
-  async presentAlertConfirm(msg) {
-    const alert = await this.alertController.create({
-      header: 'resultado!',
-      message: msg,
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
-          }
-        }, {
-          text: 'Okay',
-          handler: () => {
-            console.log('Confirm Okay');
-          }
-        }
-      ]
-    });
 
 
-
-  }
 }
