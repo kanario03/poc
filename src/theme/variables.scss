@@ -75,3 +75,94 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
+
+
+html.cameraView {
+  // background: transparent none !important;
+  width: 280px;
+  height: 550px;
+
+  /* Make inner part of rectangle transparent */
+  background-color: rgba(255, 255, 255, 0);
+
+  /* Center vertically AND horizontally */
+  position: absolute;
+  /*it can be fixed too*/
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  /* This to solve "the content will not be cut when the window is smaller than the content": */
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+
+  /* COOL BORDER */
+  // border-width: 20px;
+  // border-style: solid;
+  /* You need to place border.png into img folder */
+  // border-image: url(../img/border.png) 50 round;
+
+  /* SHADOW EFFECT darkens everything outside rectangle */
+  box-shadow: 0 0 500px 5000px rgba(0, 0, 0, 0.4);
+
+  body,
+  ion-app,
+  .modal-wrapper,
+  .ion-page {
+    background: transparent none !important;
+    
+  }
+
+  ion-content {
+    --background: var(--ion-background-color, transparent);
+  }
+
+  ion-page {
+    visibility: hidden;
+  }
+
+  app-home {
+    visibility: hidden;
+  }
+}
+
+ion-content {
+  --background: var(--ion-background-color, transparent none);
+}
+
+
+html.camera {
+  .rect_class {
+    width: 280px;
+    height: 550px;
+
+    /* Make inner part of rectangle transparent */
+    background-color: rgba(255, 255, 255, 0);
+
+    /* Center vertically AND horizontally */
+    position: absolute;
+    /*it can be fixed too*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    /* This to solve "the content will not be cut when the window is smaller than the content": */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+
+    /* COOL BORDER */
+    // border-width: 20px;
+    // border-style: solid;
+    /* You need to place border.png into img folder */
+    // border-image: url(../img/border.png) 50 round;
+
+    /* SHADOW EFFECT darkens everything outside rectangle */
+    box-shadow: 0 0 500px 5000px rgba(0, 0, 0, 0.4);
+  }
+}

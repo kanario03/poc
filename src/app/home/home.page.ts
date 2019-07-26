@@ -1,3 +1,4 @@
+import { CameraService } from './../services/camera.service';
 import { Component } from '@angular/core';
 import { AppLauncher, AppLauncherOptions } from '@ionic-native/app-launcher/ngx';
 
@@ -21,9 +22,10 @@ export class HomePage {
 
   constructor(
     private appLauncher: AppLauncher,
-    private router: Router
+    private router: Router,
+    private camera: CameraService
   ) {
-    this.information();
+    // this.information();
   }
 
   async information() {
@@ -37,7 +39,8 @@ export class HomePage {
     console.log('Open url response: ', ret);
   }
 
-  openCamera() {
+  async openCamera() {
+    // this.camera.startCamera();
     this.router.navigate(['camera']);
   }
 
