@@ -39,11 +39,11 @@ export class CameraService {
     this.cameraPreview.startCamera(cameraPreviewOpts).then(
       (res) => {
         console.log(res);
-        this.presentAlert(res);
+        // this.presentAlert(res);
       },
       (err) => {
         console.log(err);
-        this.presentAlert(err);
+        // this.presentAlert(err);
       });
 
   }
