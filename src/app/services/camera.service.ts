@@ -31,7 +31,7 @@ export class CameraService {
       tapPhoto: false,
       previewDrag: true,
       toBack: true,
-      alpha: 1
+      alpha: 0
     };
 
 

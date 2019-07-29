@@ -19,7 +19,7 @@ export class CameraPage implements OnInit {
   ngOnInit() {}
 
   async scss() {
-    await (window.document.querySelector('html') as HTMLElement).classList.add('cameraView');
+    await (window.document.querySelector('html') as HTMLElement).classList.add('camera02');
   }
 
   showCamera() {
